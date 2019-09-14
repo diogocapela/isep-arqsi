@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Class1.cs" />
+      <Compile Remove="Models\Types\**" />
+      <Compile Remove="Models\**" />
+      <Compile Remove="ValueObjects\**" />
+      <Compile Remove="OperationMachineType.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Models\Types\**" />
+      <EmbeddedResource Remove="Models\**" />
+      <EmbeddedResource Remove="ValueObjects\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Models\Types\**" />
+      <None Remove="Models\**" />
+      <None Remove="ProductionLine\DTOs\ProductionLineDTO" />
+      <None Remove="ValueObjects\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="2.2.0" />
+    </ItemGroup>
+
+</Project>

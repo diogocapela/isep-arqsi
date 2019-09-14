@@ -1,0 +1,31 @@
+image: microsoft/dotnet:sdk
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - dotnetcore
+        script:
+          - cd src
+          - dotnet restore
+          - dotnet build
+          
+  branches:
+      master:
+      - step:
+          caches:
+            - dotnetcore
+          script:
+            - mocdbstr=$prod_constrdb
+            - cd src
+            - dotnet restore
+            - dotnet build
+      Develop:
+      - step:
+          caches:
+            - dotnetcore
+          script:
+            - mocdbstr=$dev_constrdb
+            - cd src
+            - dotnet restore
+            - dotnet build

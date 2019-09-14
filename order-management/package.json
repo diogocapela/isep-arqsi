@@ -1,0 +1,47 @@
+{
+    "name": "lei19-20_s5_3na_66_ordermanagement",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "debug": "NODE_ENV=development nodemon --inspect-brk=9330 lib/server.js",
+        "clean": "rm -rf node_modules",
+        "dev": "NODE_ENV=development nodemon lib/server.js",
+        "start": "NODE_ENV=production node lib/server.js",
+        "test": "NODE_ENV=test jest --runInBand --forceExit",
+        "test:watch": "NODE_ENV=test jest --runInBand --watchAll"
+    },
+    "dependencies": {
+        "bcrypt": "3.0.7",
+        "body-parser": "1.19.0",
+        "cookie-parser": "1.4.4",
+        "cors": "2.8.5",
+        "dotenv": "8.2.0",
+        "express": "4.17.1",
+        "jest-cli": "24.9.0",
+        "jsonwebtoken": "8.5.1",
+        "lodash": "4.17.15",
+        "mongoose": "5.7.11",
+        "morgan": "1.9.1",
+        "socket.io": "2.3.0",
+        "swagger-jsdoc": "3.5.0",
+        "swagger-ui-express": "4.1.2",
+        "validator": "12.0.0"
+    },
+    "devDependencies": {
+        "eslint": "6.6.0",
+        "eslint-config-airbnb-base": "14.0.0",
+        "eslint-config-prettier": "6.6.0",
+        "eslint-plugin-import": "2.18.2",
+        "eslint-plugin-prettier": "3.1.1",
+        "jest": "24.9.0",
+        "nodemon": "1.19.4",
+        "prettier": "1.19.1",
+        "supertest": "4.0.2"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "coveragePathIgnorePatterns": [
+            "/node_modules/"
+        ]
+    }
+}

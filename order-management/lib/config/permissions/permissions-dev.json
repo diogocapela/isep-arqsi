@@ -1,0 +1,23 @@
+{
+    "admin": {
+        "orders": true,
+        "factory": true,
+        "production": true,
+        "visualization": true,
+        "profile": true
+    },
+    "gestor": {
+        "orders": true,
+        "factory": true,
+        "production": false,
+        "visualization": false,
+        "profile": true
+    },
+    "client": {
+        "orders": true,
+        "factory": false,
+        "production": false,
+        "visualization": false,
+        "profile": true
+    }
+}
